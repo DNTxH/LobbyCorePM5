@@ -11,16 +11,6 @@ NotPermissions: "§cYou do not have permissions to use"
 #Hub Nessages Config
 
 Hub-Message: "Volvistes al lobby {player}"
-Hub-Title: "Joined Lobby"
-
-#Menu Games Command Config
-
-CommandForm1: "tranferserver modalidad1.ddns.net:25595"
-CommandForm2: "tranferserver modalidad1.ddns.net:25595"
-CommandForm3: "tranferserver modalidad1.ddns.net:25595"
-CommandForm3: "tranferserver modalidad4.ddns.net:25595"
-CommandForm5: "tranferserver modalidad5.ddns.net:25595"
-CommandForm6: "tranferserver modalidad6.ddns.net:25595"
 
 #Menu Games Config
 
@@ -33,6 +23,15 @@ GameForm3: "§aMurder§cMystery"
 GameForm4: "§9The§cBridge"
 GameForm5: "§eF§bF§aA"
 GameForm6: "§eFi§ast"
+
+#Menu Games Command Config
+
+CommandForm1: "tranferserver modalidad1.ddns.net:25595"
+CommandForm2: "tranferserver modalidad1.ddns.net:25595"
+CommandForm3: "tranferserver modalidad1.ddns.net:25595"
+CommandForm3: "tranferserver modalidad4.ddns.net:25595"
+CommandForm5: "tranferserver modalidad5.ddns.net:25595"
+CommandForm6: "tranferserver modalidad6.ddns.net:25595"
 
 #Menu Cosmetics Config
 
