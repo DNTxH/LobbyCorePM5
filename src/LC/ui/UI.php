@@ -78,13 +78,24 @@ class UI {
                     } else {
                         $this->SizeForm($player);
                     }
-               break;
+                break;
+                case 2;
+                    $this->plugin->getServer()->getCommandMap()->dispatch($player, "nick");
+                break;
+                case 3;
+                    $this->plugin->getServer()->getCommandMap()->dispatch($player, "cape");
+                break;
+                case 4;
+
+                break;
             }
         });
         $form->setTitle(MG::YELLOW . $this->plugin->getConfig()->get("CosmeticTitle"));
         $form->setContent(MG::RED . $this->plugin->getConfig()->get("CosmeticInfo"));
         $form->addButton(MG::RED . $this->plugin->getConfig()->get("CosmeticForm1"));
         $form->addButton(MG::RED . $this->plugin->getConfig()->get("CosmeticForm2"));
+        $form->addButton("§6Nick");
+        $form->addButton("§bCape");
         $form->addButton("§0Black");
         $form->sendToPlayer($player);
     }
