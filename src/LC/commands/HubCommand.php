@@ -36,8 +36,6 @@ class HubCommand extends Command
                 $player->teleport($player->getServer()->getWorldManager()->getDefaultWorld()->getSafeSpawn());
                 $player->getInventory()->clearALL();
                 $player->getArmorInventory()->clearALL();
-                $player->sendMessage(str_replace(["{player}"], [$player->getName()], $this->plugin->getConfig()->get("Hub-Message")));
-                $player->sendTitle(str_replace(["{player}"], [$player->getName()], $this->plugin->getConfig()->get("Hub-Title")));
 
                 $item1 = VanillaItems::COMPASS();
                 $item1->setCustomName("Games");
