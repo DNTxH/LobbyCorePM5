@@ -22,13 +22,13 @@ class HubCommand extends Command
 
     public function __construct()
     {
-        parent::__construct("hub", "hub command", null, ["spawn"]);
+        parent::__construct("hub", "Teleport you to the server spawn!", null, ["hub", "lobby"]);
         $this->setPermission("lobbycore.command.hub");
     }
 
     public function execute(CommandSender $player, string $label, array $args)
     {
-        if ($player instanceof Player) {
+        if (!$player instanceof Player)return; {
             if (!$player->hasPermission("lobbycore.command.hub")) {
                 $player->sendMessage("No tienes permisos");
             } else {
@@ -36,14 +36,12 @@ class HubCommand extends Command
                 $player->teleport($player->getServer()->getWorldManager()->getDefaultWorld()->getSafeSpawn());
                 $player->getInventory()->clearALL();
                 $player->getArmorInventory()->clearALL();
-                $player->sendMessage(str_replace(["{player}"], [$player->getName()], $this->plugin->getConfig()->get("Hub-Message")));
-                $player->sendTitle(str_replace(["{player}"], [$player->getName()], $this->plugin->getConfig()->get("Hub-Title")));
 
-                $item1 = VanillaItems::COMPASS();
-                $item1->setCustomName("Games");
+                $item1 = VanillaItems::DIAMOND_AXE();
+                $item1->setCustomName("Cosmeticos");
 
-                $item2 = VanillaItems::DIAMOND_AXE();
-                $item2->setCustomName("Cosmeticos");
+                $item2 = VanillaItems::COMPASS();
+                $item2->setCustomName("Games");
 
                 $item3 = VanillaItems::BOOK();
                 $item3->setCustomName("Informacion");
