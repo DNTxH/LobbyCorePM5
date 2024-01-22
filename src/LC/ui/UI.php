@@ -55,7 +55,7 @@ class UI {
         $form->addButton(MG::RED . $this->plugin->getConfig()->get("GameForm4"));
         $form->addButton(MG::RED . $this->plugin->getConfig()->get("GameForm5"));
         $form->addButton(MG::RED . $this->plugin->getConfig()->get("GameForm6"));
-        $form->addButton(MG::RED . "Cerrar");
+        $form->addButton("§0Black");
         $form->sendToPlayer($player);
     }
 
@@ -85,7 +85,7 @@ class UI {
         $form->setContent(MG::RED . $this->plugin->getConfig()->get("CosmeticInfo"));
         $form->addButton(MG::RED . $this->plugin->getConfig()->get("CosmeticForm1"));
         $form->addButton(MG::RED . $this->plugin->getConfig()->get("CosmeticForm2"));
-        $form->addButton(MG::RED . "Cerrar");
+        $form->addButton("§0Black");
         $form->sendToPlayer($player);
     }
 
@@ -113,7 +113,7 @@ class UI {
         $form->setContent(MG::GRAY . $this->plugin->getConfig()->get("FlyInfo"));
         $form->addButton(MG::GREEN . $this->plugin->getConfig()->get("FlyForm1"));
         $form->addButton(MG::RED . $this->plugin->getConfig()->get("FlyForm2"));
-        $form->addButton(MG::RED . "Cerrar");
+        $form->addButton("§0Black");
         $form->sendToPlayer($player);
     }
 
@@ -145,7 +145,7 @@ class UI {
         $form->addButton(MG::GREEN . $this->plugin->getConfig()->get("SizeForm1"));
         $form->addButton(MG::GREEN . $this->plugin->getConfig()->get("SizeForm2"));
         $form->addButton(MG::GREEN . $this->plugin->getConfig()->get("SizeForm3"));
-        $form->addButton(MG::RED . "Cerrar");
+        $form->addButton("§0Black");
         $form->sendToPlayer($player);
     }
 
@@ -161,7 +161,7 @@ class UI {
         });
         $form->setTitle(MG::BLUE .$this->plugin->getConfig()->get("InfoTitle"));
         $form->setContent(MG::RED . $this->plugin->getConfig()->get("Info"));
-        $form->addButton(MG::RED . "Cerrar");
+        $form->addButton("§0Black");
         $form->sendToPlayer($player);
     }
 }
