@@ -22,7 +22,7 @@ class HubCommand extends Command
 
     public function __construct()
     {
-        parent::__construct("hub", "hub command", null, ["spawn"]);
+        parent::__construct("hub", "Teleport you to the server spawn!", null, ["hub", "lobby"]);
         $this->setPermission("lobbycore.command.hub");
     }
 
