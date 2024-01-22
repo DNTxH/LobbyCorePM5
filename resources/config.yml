@@ -24,15 +24,15 @@ CommandForm6: "tranferserver modalidad6.ddns.net:25595"
 
 #Menu Games Config
 
-GameTitle: "Modalidades"
-GameInfo: "Elije que modalidad que deseas jugar"
+GameTitle: "§bGames"
+GameInfo: "§fChoose the minigame you wanna play!"
 
-GameForm1: "modalidad1"
-GameForm2: "modalidad2"
-GameForm3: "modalidad3"
-GameForm4: "modalidad4"
-GameForm5: "modalidad5"
-GameForm6: "modalidad6"
+GameForm1: "§aSky§7Wars"
+GameForm2: "§aBed§eWars"
+GameForm3: "§aMurder§cMystery"
+GameForm4: "§9The§cBridge"
+GameForm5: "§eF§bF§aA"
+GameForm6: "§eFi§ast"
 
 #Menu Cosmetics Config
 
@@ -60,14 +60,11 @@ FlyForm2: "FLY OFF"
 
 #Message Size Config
 
-SizeMessageNormal: "Size normal"
-SizeTitleNormal: "Su tamaño es normal"
+SizeMessageNormal: "Size Normal!"
 
-SizeMessageMedium: "Size medium"
-SizeTitleMedium: "Su tamaño es mediano"
+SizeMessageMedium: "Size Medium!"
 
-SizeMessageBig: "Size big"
-SizeTitleBig: "Su tamaño es grande"
+SizeMessageBig: "Size Big!"
 
 #Menu Size Config
 
@@ -76,7 +73,7 @@ SizeInfo: "Aumenta el tamaño de tu skin"
 
 SizeForm1: "Size Normal"
 SizeForm2: "Size Mediano"
-SizeForm3: "Size Grande"
+SizeForm3: "Size Big!"
 
 #Menu Info Config
 
