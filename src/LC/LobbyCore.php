@@ -34,7 +34,7 @@ class LobbyCore extends PluginBase implements Listener {
         $this->getLogger()->info(MG::GREEN . "LobbyCore enabled successfully, plugin made by JuanantonioVYT for MegaHost community");
         $this->getServer()->getPluginManager()->registerEvents(new EventListener(), $this);
         $this->getServer()->getPluginManager()->registerEvents(new Protection(), $this);
-        $this->getServer()->getCommandMap()->register("/hub", new HubCommand());
+        $this->getServer()->getCommandMap()->register("hub", new HubCommand());
         $this->saveResource("config.yml");
     }
 
