@@ -29,40 +29,36 @@ class HubCommand extends Command
 
     public function execute(CommandSender $player, string $label, array $args)
     {
-        if ($player instanceof Player) {
-            if (!$player->hasPermission("lobbycore.command.hub")) {
-                $player->sendMessage("No tienes permisos");
-            } else {
-                $this->plugin = LobbyCore::getInstance();
-                $player->teleport($player->getServer()->getWorldManager()->getDefaultWorld()->getSafeSpawn());
-                $player->getInventory()->clearALL();
-                $player->getArmorInventory()->clearALL();
-                $player->sendMessage(str_replace(["{player}"], [$player->getName()], $this->plugin->getConfig()->get("Hub-Message")));
+        if (!$player instanceof Player)return;
+        
+        $this->plugin = LobbyCore::getInstance();
+        $player->teleport($player->getServer()->getWorldManager()->getDefaultWorld()->getSafeSpawn());
+        $player->getInventory()->clearALL();
+        $player->getArmorInventory()->clearALL();
+        $player->sendMessage(str_replace(["{player}"], [$player->getName()], $this->plugin->getConfig()->get("Hub-Message")));
 
-                $item1 = VanillaBlocks::ENDER_CHEST()->asItem();
-                $item1->setCustomName("Cosmetics");
+        $item1 = VanillaBlocks::ENDER_CHEST()->asItem();
+        $item1->setCustomName("Cosmetics");
 
-                $item2 = VanillaBlocks::ANVIL()->asItem();
-                $item2->setCustomName("ReportPlayer");
+        $item2 = VanillaBlocks::ANVIL()->asItem();
+        $item2->setCustomName("ReportPlayer");
 
-                $item3 = VanillaItems::BOOK();
-                $item3->setCustomName("Informacion");
+        $item3 = VanillaItems::BOOK();
+        $item3->setCustomName("Informacion");
                 
-                $item3 = VanillaItems::COMPASS();
-                $item3->setCustomName("Teleporter");
+        $item3 = VanillaItems::COMPASS();
+        $item3->setCustomName("Teleporter");
 
-                $item4 = VanillaItems::POPPED_CHORUS_FRUIT();
-                $item4->setCustomName("InfoUI");
+        $item4 = VanillaItems::POPPED_CHORUS_FRUIT();
+        $item4->setCustomName("InfoUI");
 
-                $item5 = VanillaItems::NETHER_STAR();
-                $item5->setCustomName("Lobby");
+        $item5 = VanillaItems::NETHER_STAR();
+        $item5->setCustomName("Lobby");
 
-                $player->getInventory()->setItem(0, $item1);
-                $player->getInventory()->setItem(1, $item2);
-                $player->getInventory()->setItem(4, $item3);
-                $player->getInventory()->setItem(7, $item4);
-                $player->getInventory()->setItem(8, $item5);
-            }
-        }
+        $player->getInventory()->setItem(0, $item1);
+        $player->getInventory()->setItem(1, $item2);
+        $player->getInventory()->setItem(4, $item3);
+        $player->getInventory()->setItem(7, $item4);
+        $player->getInventory()->setItem(8, $item5);
     }
 }
