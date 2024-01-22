@@ -90,10 +90,10 @@ class UI {
                 break;
             }
         });
-        $form->setTitle(MG::YELLOW . $this->plugin->getConfig()->get("CosmeticTitle"));
-        $form->setContent(MG::RED . $this->plugin->getConfig()->get("CosmeticInfo"));
-        $form->addButton(MG::RED . $this->plugin->getConfig()->get("CosmeticForm1"));
-        $form->addButton(MG::RED . $this->plugin->getConfig()->get("CosmeticForm2"));
+        $form->setTitle("§bCosmetics");
+        $form->setContent("§fPick THe Setting!");
+        $form->addButton("§aFly");
+        $form->addButton("§cSize");
         $form->addButton("§6Nick");
         $form->addButton("§bCape");
         $form->addButton("§0Black");
@@ -109,14 +109,12 @@ class UI {
                 case 0:
                     $player->setFlying(true);
                     $player->setAllowFlight(true);
-                    $player->sendMessage(MG::GREEN . $this->plugin->getConfig()->get("FlyMessageTrue"));
-                    $player->sendTitle(MG::GREEN . $this->plugin->getConfig()->get("FlyTitleTrue"));
+                    $player->sendMessage("§aFly ON!");
                     break;
                 case 1:
                     $player->setFlying(false);
                     $player->setAllowFlight(false);
-                    $player->sendMessage(MG::RED . $this->plugin->getConfig()->get("FlyMessageFalse"));
-                    $player->sendTitle(MG::RED . $this->plugin->getConfig()->get("FlyTitleFalse"));
+                    $player->sendMessage("§cFly OFF!");
                     break;
             }
         });
@@ -137,17 +135,14 @@ class UI {
                 case 0:
                     $player->setScale("1.0");
                     $player->sendMessage(MG::GREEN . $this->plugin->getConfig()->get("SizeMessageNormal"));
-                    $player->sendTitle(MG::GREEN . $this->plugin->getConfig()->get("SizeTitleNormal"));
                     break;
                 case 1:
                     $player->setScale("1.5");
                     $player->sendMessage(MG::GREEN . $this->plugin->getConfig()->get("SizeMessageMedium"));
-                    $player->sendTitle(MG::GREEN . $this->plugin->getConfig()->get("SizeTitleMedium"));
                     break;
                 case 2:
                     $player->setScale("2.0");
                     $player->sendMessage(MG::GREEN . $this->plugin->getConfig()->get("SizeMessageBig"));
-                    $player->sendTitle(MG::GREEN . $this->plugin->getConfig()->get("SizeTitleBig"));
                     break;
             }
         });
