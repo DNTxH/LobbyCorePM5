@@ -91,3 +91,4 @@ class EventListener implements Listener
             $this->plugin->getServer()->getCommandMap()->dispatch($player, "hub");
         }
     }
+}
