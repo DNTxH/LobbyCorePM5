@@ -41,11 +41,11 @@ class EventListener implements Listener
         Server::getInstance()->broadcastMessage(str_replace(["{player}"], [$player->getName()], $this->plugin->getConfig()->get("Join-Message")));
         $player->teleport(Server::getInstance()->getWorldManager()->getDefaultWorld()->getSafeSpawn());
 
-        $item1 = VanillaItems::COMPASS();
-        $item1->setCustomName("Games");
+        $item1 = VanillaItems::DIAMOND_AXE();
+        $item1->setCustomName("Cosmeticos");
 
-        $item2 = VanillaItems::DIAMOND_AXE();
-        $item2->setCustomName("Cosmeticos");
+        $item2 = VanillaItems::COMPASS();
+        $item2->setCustomName("Games");
 
         $item3 = VanillaItems::BOOK();
         $item3->setCustomName("Informacion");
@@ -70,10 +70,10 @@ class EventListener implements Listener
         $player = $event->getPlayer();
         $itn = $player->getInventory()->getItemInHand()->getCustomName();
         if ($itn == "Games") {
-            LobbyCore::getInstance()->getUI()->getGames($player);
-        }
-        if ($itn == "Cosmeticos") {
             LobbyCore::getInstance()->getUI()->getCosmetics($player);
+        }
+        if ($itn == "Games") {
+            LobbyCore::getInstance()->getUI()->getGames($player);
         }
         if ($itn == "Informacion") {
             LobbyCore::getInstance()->getUI()->getInfo($player);
